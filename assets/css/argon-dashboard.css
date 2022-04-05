@@ -97,6 +97,17 @@ hr:not([size]) {
   height: 1px;
 }
 
+
+.profileDisplay {
+  display: block;
+  width: 10%;
+  margin: 10px auto;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+
+
 h1,
 .h1,
 h2,
@@ -6789,7 +6800,7 @@ fieldset:disabled .btn {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-betweenn;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.75rem - 1px);
@@ -21146,7 +21157,7 @@ fieldset:disabled .btn {
 }
 
 .input-group {
-  border-radius: 0.5rem;
+  border-radius: 2rem;
 }
 
 .input-group,

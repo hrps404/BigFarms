@@ -1,6 +1,5 @@
 <?php   
 
-    session_start();
     include('../connection.php');  
     include('../sidebar.php');
 
@@ -153,10 +152,18 @@
                     </button>
                     </div>' ; } 
                 ?> 
+
+              
            
                 <div class="card-body">
-                    <form action ="updateUser.php" method="POST" name="editUser">  
+                    <form action ="updateUser.php" method="POST" name="editUser" enctype="multipart/form-data">  
               
+                    <div class="row align-middle" style="text-align:center">
+                      <image src = "/assets/img/profileImages/<?php echo $row['profileImage']; ?>" onclick="triggerClick()" id="profileDisplay" style=" display: block; width: 15%; margin: 10px auto; border-radius: 50%; object-fit: cover;"/>
+                      <label for="profileImage"><?php echo $row['FName']. " ". $row['LName']; ?></label>
+                      <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style = "display:none;">
+                    </div>
+
                         <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -251,6 +258,8 @@
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../assets/js/profilescript.js"></script>
+
   <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 

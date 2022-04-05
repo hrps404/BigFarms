@@ -3,7 +3,7 @@
 
     $db= $con;
     $tableName="seedinventory";
-    $columns= ['seedID', 'name','category','expiry','quantity', 'seedWay'];
+    $columns= ['seedID', 'name','category','expiry','quantity', 'seedWay','seedImage'];
     $fetchSeeds = fetch_data($db, $tableName, $columns);
     
     function fetch_data($db, $tableName, $columns){
@@ -33,4 +33,8 @@
         }
         return $msg;
     }
+
+
+
+
 ?>

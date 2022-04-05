@@ -3,7 +3,7 @@
 
     $db= $con;
     $tableName="useraccounts";
-    $columns= ['UID', 'FName','LName','Address','PhoneNo', 'Email','username','role','isOnline'];
+    $columns= ['UID', 'FName','LName','Address','PhoneNo', 'Email','username','role','isOnline', 'profileImage'];
     $fetchData = fetch_data($db, $tableName, $columns);
     
     function fetch_data($db, $tableName, $columns){

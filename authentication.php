@@ -31,11 +31,14 @@
             $update = "UPDATE useraccounts SET isOnline = TRUE WHERE username = '$username'";
             $sql2 = mysqli_query($con,$update);
 
+            $_SESSION['UID'] = $row['UID'];
             $_SESSION['fName'] = $row['FName'];
             $_SESSION['lName'] = $row['LName'];
             $_SESSION['email'] = $row["Email"];
             $_SESSION['address'] = $row["Address"];
             $_SESSION['phoneNo'] = $row["PhoneNo"];
+            $_SESSION['profileImage'] = $row["profileImage"];
+
 
             if($row['role'] == "admin"){
                 $_SESSION['role'] = "Admin";
